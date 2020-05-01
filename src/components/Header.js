@@ -76,13 +76,13 @@ const Header = ({ location, isDarkThemeActive, toggleActiveTheme }) => (
       }
     `}
     render={data => {
-      const logoImg = require('./images/logo.svg');
+      const logoImg = require('./images/rbc-4.svg');
 
       const twitter = require('./images/twitter.svg');
 
-      const discordBrandsBlock = require('./images/discord-brands-block.svg');
+      // const discordBrandsBlock = require('./images/discord-brands-block.svg');
 
-      const twitterBrandsBlock = require('./images/twitter-brands-block.svg');
+      // const twitterBrandsBlock = require('./images/twitter-brands-block.svg');
 
       const {
         site: {
@@ -90,7 +90,7 @@ const Header = ({ location, isDarkThemeActive, toggleActiveTheme }) => (
         },
       } = data;
 
-      const finalLogoLink = logo.link !== '' ? logo.link : 'https://hasura.io/';
+      const finalLogoLink = logo.link !== '' ? logo.link : 'https://exmaple.io/';
 
       return (
         <div className={'navBarWrapper'}>
@@ -99,8 +99,12 @@ const Header = ({ location, isDarkThemeActive, toggleActiveTheme }) => (
               <Link to={finalLogoLink} className={'navBarBrand'}>
                 <img
                   className={'img-responsive displayInline'}
-                  src={logo.image !== '' ? logo.image : logoImg}
+                  src={logoImg}
                   alt={'logo'}
+                  style={{
+                    width: "56px"
+                  }}
+
                 />
               </Link>
               <div
